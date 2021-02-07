@@ -1,0 +1,23 @@
+magic
+tech sky130A
+timestamp 1612718123
+<< locali >>
+rect -120 -40 -100 -20
+rect 270 -40 290 -20
+<< metal1 >>
+rect -120 155 -100 245
+rect -120 0 -100 90
+use inverter  inverter_1 ~/MADVLSI/inverter_tutorial/layout
+timestamp 1612716826
+transform 1 0 615 0 1 140
+box -530 -200 -325 130
+use inverter  inverter_0
+timestamp 1612716826
+transform 1 0 410 0 1 140
+box -530 -200 -325 130
+<< labels >>
+rlabel locali 290 -30 290 -30 3 Y
+rlabel locali -120 -30 -120 -30 7 A
+rlabel metal1 -120 45 -120 45 7 VN
+rlabel metal1 -115 190 -115 190 7 VP
+<< end >>

@@ -1,0 +1,8 @@
+* SPICE3 file created from inverter.ext - technology: sky130A
+
+.option scale=5000u
+
+.subckt inverter A Y VP VN
+X0 Y A VN VN sky130_fd_pr__nfet_01v8 ad=8 pd=0 as=96 ps=0 w=200 l=30
+X1 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=96 ps=0 w=200 l=30
+.ends
