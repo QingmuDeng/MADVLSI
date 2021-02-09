@@ -1,0 +1,9 @@
+* SPICE3 file created from /home/madvlsi/MADVLSI/mini1/layout/NAND2.ext - technology: sky130A
+
+.subckt home/madvlsi/MADVLSI/mini1/layout/NAND2 A B Y VP VN
+X0 a_30_0# A VN VN sky130_fd_pr__nfet_01v8 ad=2.5e+11p pd=2.5e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 VP B Y VP sky130_fd_pr__pfet_01v8 ad=1e+12p pd=6e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X2 Y A VP VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X3 Y B a_30_0# VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+.ends
+

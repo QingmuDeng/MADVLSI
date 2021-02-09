@@ -1,12 +1,25 @@
 magic
 tech sky130A
-timestamp 1612844529
+timestamp 1612889763
+<< locali >>
+rect 0 325 20 345
+rect 0 20 20 40
+rect 455 20 475 40
+<< metal1 >>
+rect 0 215 15 305
+rect 0 60 15 150
 use NAND2  NAND2_0
-timestamp 1612842696
+timestamp 1612889628
 transform 1 0 145 0 1 55
 box -145 -55 125 310
 use inverter  inverter_0
 timestamp 1612836176
 transform 1 0 800 0 1 200
 box -530 -200 -325 130
+<< labels >>
+rlabel metal1 0 255 0 255 7 VP
+rlabel metal1 0 100 0 100 7 VN
+rlabel locali 475 30 475 30 3 Y
+rlabel locali 0 335 0 335 7 B
+rlabel locali 0 30 0 30 7 A
 << end >>

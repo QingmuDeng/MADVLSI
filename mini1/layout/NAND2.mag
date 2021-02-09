@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1612842696
+timestamp 1612889628
 << nwell >>
 rect -145 135 125 275
 << nmos >>
@@ -40,17 +40,17 @@ rect -60 170 -40 240
 rect 5 170 25 240
 rect 70 170 90 240
 << psubdiff >>
-rect -130 85 -80 100
-rect -130 15 -115 85
-rect -95 15 -80 85
-rect -130 0 -80 15
+rect -125 85 -50 100
+rect -125 15 -110 85
+rect -90 15 -50 85
+rect -125 0 -50 15
 << nsubdiff >>
 rect -125 240 -75 255
 rect -125 170 -110 240
 rect -90 170 -75 240
 rect -125 155 -75 170
 << psubdiffcont >>
-rect -115 15 -95 85
+rect -110 15 -90 85
 << nsubdiffcont >>
 rect -110 170 -90 240
 << poly >>
@@ -95,14 +95,11 @@ rect 60 160 100 170
 rect 15 135 35 160
 rect 15 115 100 135
 rect 80 95 100 115
-rect -125 85 -85 95
-rect -125 15 -115 85
-rect -95 15 -85 85
-rect -125 5 -85 15
-rect -45 85 -5 95
-rect -45 15 -35 85
+rect -120 85 -5 95
+rect -120 15 -110 85
+rect -90 15 -35 85
 rect -15 15 -5 85
-rect -45 5 -5 15
+rect -120 5 -5 15
 rect 60 85 100 95
 rect 60 15 70 85
 rect 90 15 100 85
@@ -118,7 +115,7 @@ rect -25 -55 15 -45
 rect -110 170 -90 240
 rect -60 170 -40 240
 rect 70 170 90 240
-rect -115 15 -95 85
+rect -110 15 -90 85
 rect -35 15 -15 85
 << metal1 >>
 rect -145 240 125 250
@@ -128,8 +125,8 @@ rect -40 170 70 240
 rect 90 170 125 240
 rect -145 160 125 170
 rect -145 85 125 95
-rect -145 15 -115 85
-rect -95 15 -35 85
+rect -145 15 -110 85
+rect -90 15 -35 85
 rect -15 15 125 85
 rect -145 5 125 15
 << labels >>
@@ -137,10 +134,10 @@ rlabel locali -145 -25 -145 -25 7 A
 port 1 w
 rlabel locali 125 -25 125 -25 3 Y
 port 3 e
-rlabel metal1 -145 50 -145 50 7 VN
-port 5 w
 rlabel metal1 -145 205 -145 205 7 VP
 port 4 w
 rlabel locali -145 280 -145 280 7 B
 port 2 w
+rlabel metal1 -145 50 -145 50 7 VN
+port 5 w
 << end >>
