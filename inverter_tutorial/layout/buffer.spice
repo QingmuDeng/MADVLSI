@@ -1,8 +1,8 @@
 * SPICE3 file created from buffer.ext - technology: sky130A
 
-.subckt inverter A Y : VN
+.subckt inverter A Y VP VN
 X0 Y A VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
-X1 Y A : : sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 Y A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
 .ends
 
 

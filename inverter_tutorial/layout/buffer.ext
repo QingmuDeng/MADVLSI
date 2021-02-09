@@ -1,4 +1,4 @@
-timestamp 1612717787
+timestamp 1612836255
 version 8.3
 tech sky130A
 style ngspice()
@@ -12,16 +12,16 @@ node "Y" 12 45.48 540 -80 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "A" 12 45.48 -240 -80 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 160 0 0 0 0 0 0 0 0 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 cap "VP" "VN" 13.8462
-cap "inverter_1/A" "inverter_0/A" 19.8652
-cap "inverter_1/A" "inverter_1/:" 59.4
-cap "inverter_1/VN" "inverter_1/:" -13.8462
+cap "inverter_0/A" "inverter_1/A" 19.8652
+cap "inverter_1/VN" "inverter_1/VP" -13.8462
 cap "inverter_1/A" "inverter_1/Y" 51.1622
-cap "inverter_1/A" "inverter_1/VN" 59.4
+cap "inverter_1/VN" "inverter_1/A" 59.4
+cap "inverter_1/VP" "inverter_1/A" 59.4
 merge "inverter_0/VN" "VN" -168.68 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7200 -800 0 0 0 0 0 0 0 0 0 0
 merge "VN" "inverter_1/VN"
 merge "inverter_1/VN" "VSUBS"
-merge "inverter_0/:" "inverter_1/:" -168.68 0 0 0 0 0 -560 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7200 -800 0 0 0 0 0 0 0 0 0 0
-merge "inverter_1/:" "VP"
 merge "inverter_0/A" "A" -45.48 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/VP" "inverter_1/VP" -168.68 0 0 0 0 0 -560 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7200 -800 0 0 0 0 0 0 0 0 0 0
+merge "inverter_1/VP" "VP"
 merge "inverter_1/Y" "Y" -45.48 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -160 0 0 0 0 0 0 0 0 0 0 0 0
 merge "inverter_0/Y" "inverter_1/A" -22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
