@@ -1,0 +1,12 @@
+magic
+tech sky130A
+timestamp 1612844529
+use NAND2  NAND2_0
+timestamp 1612842696
+transform 1 0 145 0 1 55
+box -145 -55 125 310
+use inverter  inverter_0
+timestamp 1612836176
+transform 1 0 800 0 1 200
+box -530 -200 -325 130
+<< end >>
