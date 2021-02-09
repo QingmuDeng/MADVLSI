@@ -1,0 +1,18 @@
+drc style drc(full)
+grid 0.05um 0.05um
+psc - p substrate contact
+psd - p substrate diffusion
+li - local interconnect
+s - select entire cell
+select area 
+copy n(orth) 30
+paint nwell
+label A w
+port make 1
+label VP w m1
+getcell inverter
+shift X or X
+extract all (for spice netlist)
+ext2spice hierarchy on
+ext2spice scale off
+ext2spice
