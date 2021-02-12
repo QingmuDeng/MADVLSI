@@ -39,12 +39,31 @@ options= -s example_style.ist, intoc]
     urlcolor=cyan,
 }
 
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
 \begin{document}
-\title{Mixed Analog-Digital VLSI Mini-project 1: 2-Input AND Gate}
+\title{Mixed Analog-Digital VLSI Mini-Project I: 2-Input AND Gate}
 \author{Qingmu Deng}
 \maketitle % this line makes the title appear, along with today's date, automatically updated.
 
-
+Project Github: \href{https://github.com/QingmuDeng/MADVLSI/tree/main/mini1}{https://github.com/QingmuDeng/MADVLSI/tree/main/mini1}
+project Zip: \href{https://github.com/QingmuDeng/MADVLSI/tree/main/mini1/Deng-mini1.zip}{https://github.com/QingmuDeng/MADVLSI/tree/main/mini1/Deng-mini1.zip}
 \section{Schematic Capture and Simulation}
     \begin{figure}[!ht]
         \begin{subfigure}{0.5\linewidth}
@@ -90,13 +109,14 @@ options= -s example_style.ist, intoc]
         %     \
         % \end{subfigure}
         \includegraphics[width=\linewidth]{AND2_sim.png}
-        \caption{The simulation AND2 gate behavior view in \textit{gaw}.}
+        \caption{The simulation AND2 gate behavior viewed in \textit{gaw}.}
         \label{fig:and2res}
     \end{figure}
 
 
 \FloatBarrier
 \section{Layout Design}
+    Similarly, the inverter and NAND2 were separately laid out in \textit{Magic} as shown in Figure \ref{fig:invmag} and \ref{fig:nand2mag}. The output of the NAND2 was designed to align with the input of the inverter such that they can fit together nicely to form AND2 as shown in Figure \ref{fig:and2mag}, all the while sharing and extending the same power rails.
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=0.8\linewidth]{inverter_mag.png}
@@ -113,10 +133,75 @@ options= -s example_style.ist, intoc]
         \centering
         \includegraphics[width=\linewidth]{and2mag.png}
         \caption{\textit{Magic} layout of the AND2 by combining NAND2 and inverter layouts.}
-        \label{fig:nand2mag}
+        \label{fig:and2mag}
     \end{figure}
 
     \FloatBarrier
     \section{Layout versus Schematic}
+    Finally, I compared the two netlists generated through schematic capture and physical layout. The output of the LVS can be found below. The netlists of the two designs were found to be uniquely matching. Although there are two mismatches highlighted, they are spurious as they are simply a permutation of the input pins. As suggested by the LVS output at the end of the block where the two mismatches were reported, the two NAND gate netlists were equivalent.
+    \begin{lstlisting}[language=tcl, caption=Netgen comparison between Xschem and Magic AND2]
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+
+Subcircuit summary:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|----------------------------
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: inverter                        |Circuit 2: inverter                        
+-------------------------------------------|----------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+VN                                         |VN                                         
+VP                                         |VP                                         
+------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes inverter and inverter are equivalent.
+
+Subcircuit summary:
+Circuit 1: NAND2                           |Circuit 2: NAND2                           
+-------------------------------------------|----------------------------
+sky130_fd_pr__nfet_01v8 (2)                |sky130_fd_pr__nfet_01v8 (2)                
+sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (2)                
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: NAND2                           |Circuit 2: NAND2                           
+-------------------------------------------|----------------------------
+VP                                         |VP                                         
+B                                          |A **Mismatch**                             
+A                                          |B **Mismatch**                             
+VN                                         |VN                                         
+Y                                          |Y                                          
+------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NAND2 and NAND2 are equivalent.
+
+Subcircuit summary:
+Circuit 1: AND_no_C.spice                  |Circuit 2: layout/AND2.spice               
+-------------------------------------------|----------------------------
+inverter (1)                               |inverter (1)                               
+NAND2 (1)                                  |NAND2 (1)                                  
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 6                          |Number of nets: 6                          
+------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes AND_no_C.spice and layout/AND2.spice are equivalent.
+Circuits match uniquely.
+
+    \end{lstlisting}
     
 \end{document}
