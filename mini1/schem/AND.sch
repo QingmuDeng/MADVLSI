@@ -19,8 +19,6 @@ N -60 70 -60 80 { lab=VB}
 N -130 -10 -100 -10 { lab=VA}
 N -60 10 -60 70 { lab=VB}
 N -60 10 -40 10 { lab=VB}
-C {/home/madvlsi/MADVLSI/mini1/inverter.sym} 130 0 0 0 {name=X1}
-C {/home/madvlsi/MADVLSI/mini1/NAND2.sym} 0 0 0 0 {name=X2}
 C {madvlsi/capacitor.sym} 210 30 0 0 {name=C1
 value=200f
 m=1}
@@ -51,3 +49,5 @@ C {devices/lab_pin.sym} 210 0 0 1 {name=l9 sig_type=std_logic lab=Vout
 }
 C {devices/code_shown.sym} 130 100 0 0 {name=SPICE only_toplevel=false value=".tran 0.01n 0.1u
 .save all"}
+C {/home/madvlsi/MADVLSI/mini1/schem/NAND2.sym} 0 0 0 0 {name=X1}
+C {/home/madvlsi/MADVLSI/mini1/schem/inverter.sym} 130 0 0 0 {name=X2}
