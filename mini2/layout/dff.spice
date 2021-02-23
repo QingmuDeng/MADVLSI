@@ -1,0 +1,22 @@
+* SPICE3 file created from dff.ext - technology: sky130A
+
+.option scale=5000u
+
+.subckt dff D nD CLK VP VN Q nQ
+X0 nQ Q a_290_980# VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=10 ps=112 w=200 l=30
+X1 a_30_430# CLK D VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X2 a_30_n430# CLK VN VN sky130_fd_pr__nfet_01v8 ad=8 pd=0 as=8 ps=59 w=200 l=30
+X3 a_290_980# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=8 ps=0 w=200 l=30
+X4 Q CLK a_30_430# VN sky130_fd_pr__nfet_01v8 ad=3.58118e+06 pd=0 as=0 ps=0 w=200 l=30
+X5 a_30_980# CLK nD VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X6 a_30_430# a_30_980# a_30_120# VN sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X7 VN Q nQ VN sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X8 VN nQ Q VN sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X9 VP a_30_980# a_30_430# VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X10 a_30_120# CLK VN VN sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X11 Q nQ a_290_430# VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=8 ps=171 w=200 l=30
+X12 a_30_980# a_30_430# a_30_n430# VN sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X13 VP a_30_430# a_30_980# VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X14 a_290_430# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+X15 nQ CLK a_30_980# VN sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0 ps=0 w=200 l=30
+.ends

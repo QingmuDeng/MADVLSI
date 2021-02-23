@@ -88,6 +88,10 @@ N 470 -180 520 -180 { lab=Q}
 N 520 -180 570 -180 { lab=Q}
 N 520 -280 570 -280 { lab=nQ}
 N 520 60 520 80 { lab=GND}
+N 570 -180 590 -180 { lab=Q}
+N 570 -280 590 -280 { lab=nQ}
+N 690 -280 700 -280 { lab=nQc}
+N 690 -180 700 -180 { lab=Qc}
 C {madvlsi/vdd.sym} 200 -320 0 0 {name=l2 lab=VDD}
 C {devices/lab_pin.sym} -150 -180 0 0 {name=l4 sig_type=std_logic lab=D}
 C {devices/lab_pin.sym} -150 -280 0 0 {name=l5 sig_type=std_logic lab=nD}
@@ -177,7 +181,7 @@ spiceprefix=X
 }
 C {madvlsi/pmos3.sym} -40 -180 3 0 {name=M21
 L=0.15
-W=1.5
+W=1
 body=VDD
 nf=1
 mult=1
@@ -207,7 +211,7 @@ spiceprefix=X
 }
 C {madvlsi/pmos3.sym} -40 -280 3 0 {name=M23
 L=0.15
-W=1.5
+W=1
 body=VDD
 nf=1
 mult=1
@@ -237,7 +241,7 @@ spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 290 -40 1 0 {name=M25
 L=0.15
-W=1.5
+W=1
 body=GND
 nf=1
 mult=1
@@ -252,7 +256,7 @@ spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 290 60 1 0 {name=M26
 L=0.15
-W=1.5
+W=1
 body=GND
 nf=1
 mult=1
@@ -362,3 +366,19 @@ C {devices/lab_pin.sym} 200 -40 1 0 {name=l19 sig_type=std_logic lab=Q0}
 C {madvlsi/gnd.sym} 520 80 0 0 {name=l20 lab=GND}
 C {devices/code_shown.sym} -380 150 0 0 {name=SPICE only_toplevel=false value=".tran 0.01n 50n
 .save all"}
+C {madvlsi/capacitor.sym} 700 -150 0 0 {name=C1
+value=200f
+m=1}
+C {madvlsi/capacitor.sym} 700 -250 0 0 {name=C2
+value=200f
+m=1}
+C {madvlsi/gnd.sym} 700 -120 0 0 {name=l1 lab=GND}
+C {madvlsi/gnd.sym} 700 -220 0 0 {name=l21 lab=GND}
+C {/home/madvlsi/MADVLSI/mini2/schem/buffer.sym} 630 -280 0 0 {name=X2}
+C {/home/madvlsi/MADVLSI/mini2/schem/buffer.sym} 630 -180 0 0 {name=X3}
+C {madvlsi/gnd.sym} 630 -240 3 0 {name=l22 lab=GND}
+C {madvlsi/vdd.sym} 630 -320 0 0 {name=l23 lab=VDD}
+C {madvlsi/vdd.sym} 630 -220 3 0 {name=l24 lab=VDD}
+C {madvlsi/gnd.sym} 630 -140 0 0 {name=l25 lab=GND}
+C {devices/lab_pin.sym} 700 -180 2 0 {name=l26 sig_type=std_logic lab=Qc}
+C {devices/lab_pin.sym} 700 -280 2 0 {name=l27 sig_type=std_logic lab=nQc}

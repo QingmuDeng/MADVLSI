@@ -1,0 +1,49 @@
+magic
+tech sky130A
+timestamp 1614055126
+<< locali >>
+rect -100 550 -80 570
+rect 220 550 240 570
+rect 535 550 555 570
+rect 850 550 870 570
+rect 1165 550 1185 570
+rect -100 345 -80 365
+rect 220 345 240 365
+rect 535 345 555 365
+rect 850 345 870 365
+rect 1165 345 1185 365
+<< metal1 >>
+rect -100 270 -85 645
+rect -100 -160 -85 215
+rect -100 -255 -60 -215
+use dff  dff_0
+timestamp 1614028829
+transform 1 0 -15 0 1 55
+box -85 -310 255 645
+use dff  dff_1
+timestamp 1614028829
+transform 1 0 300 0 1 55
+box -85 -310 255 645
+use dff  dff_2
+timestamp 1614028829
+transform 1 0 615 0 1 55
+box -85 -310 255 645
+use dff  dff_3
+timestamp 1614028829
+transform 1 0 930 0 1 55
+box -85 -310 255 645
+<< labels >>
+rlabel metal1 -100 -235 -100 -235 7 CLK
+rlabel metal1 -100 25 -100 25 7 VN
+rlabel metal1 -100 455 -100 455 7 VP
+rlabel locali -100 560 -100 560 7 nD
+rlabel locali -100 355 -100 355 7 D
+rlabel locali 230 355 230 355 7 Q0
+rlabel locali 230 560 230 560 7 nQ0
+rlabel locali 545 560 545 560 7 nQ1
+rlabel locali 545 355 545 355 7 Q1
+rlabel locali 860 560 860 560 7 nQ2
+rlabel locali 860 355 860 355 7 Q2
+rlabel locali 1175 355 1175 355 7 Q3
+rlabel locali 1175 560 1175 560 7 nQ3
+<< end >>
