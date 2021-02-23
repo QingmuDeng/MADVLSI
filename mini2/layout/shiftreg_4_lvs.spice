@@ -1,0 +1,30 @@
+* SPICE3 file created from shiftreg_4_lvs.ext - technology: sky130A
+
+.subckt dff D nD CLK VP VN Q nQ
+X0 nQ Q a_290_980# VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=2.5e+11p ps=2.5e+06u w=1e+06u l=150000u
+X1 a_30_430# CLK D VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X2 a_30_n430# CLK VN VN sky130_fd_pr__nfet_01v8 ad=2.5e+11p pd=2.5e+06u as=2e+12p ps=1.2e+07u w=1e+06u l=150000u
+X3 a_290_980# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=1e+12p ps=6e+06u w=1e+06u l=150000u
+X4 Q CLK a_30_430# VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X5 a_30_980# CLK nD VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X6 a_30_430# a_30_980# a_30_120# VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=2.5e+11p ps=2.5e+06u w=1e+06u l=150000u
+X7 VN Q nQ VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X8 VN nQ Q VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X9 VP a_30_980# a_30_430# VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X10 a_30_120# CLK VN VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X11 Q nQ a_290_430# VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=2.5e+11p ps=2.5e+06u w=1e+06u l=150000u
+X12 a_30_980# a_30_430# a_30_n430# VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X13 VP a_30_430# a_30_980# VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X14 a_290_430# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X15 nQ CLK a_30_980# VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
+
+* Top level circuit shiftreg_4_lvs
+
+Xdff_0 D nD CLK VP VN Q0 nQ0 dff
+Xdff_1 Q0 nQ0 CLK VP VN Q1 nQ1 dff
+Xdff_2 Q1 nQ1 CLK VP VN Q2 nQ2 dff
+Xdff_3 Q2 nQ2 CLK VP VN Q3 nQ3 dff
+.end
+

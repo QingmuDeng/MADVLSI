@@ -1,0 +1,12 @@
+magic
+tech sky130A
+timestamp 1614099017
+use shiftreg_4  shiftreg_4_0
+timestamp 1614099017
+transform 1 0 -190 0 1 -35
+box -100 -255 1185 700
+use inverter  inverter_0
+timestamp 1614097730
+transform 1 0 -295 0 1 -285
+box -145 -5 20 950
+<< end >>

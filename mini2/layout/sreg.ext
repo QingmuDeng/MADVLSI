@@ -1,0 +1,37 @@
+timestamp 1614097730
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
+use shiftreg_4 shiftreg_4_0 1 0 -380 0 1 -70
+use inverter inverter_0 1 0 -590 0 1 -570
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "shiftreg_4_0/D" "shiftreg_4_0/VN" -1.42109e-14
+cap "shiftreg_4_0/nD" "shiftreg_4_0/VP" 7.33333
+cap "shiftreg_4_0/D" "shiftreg_4_0/dff_0/a_30_980#" 9.07895
+cap "shiftreg_4_0/nD" "shiftreg_4_0/dff_0/a_30_430#" 3.56757
+cap "shiftreg_4_0/D" "shiftreg_4_0/CLK" 22.2333
+cap "shiftreg_4_0/nD" "shiftreg_4_0/D" 15.931
+cap "shiftreg_4_0/nD" "shiftreg_4_0/VN" 23.76
+cap "shiftreg_4_0/VP" "shiftreg_4_0/dff_0/a_30_430#" 11.6581
+cap "shiftreg_4_0/D" "shiftreg_4_0/VP" -5.68434e-14
+cap "shiftreg_4_0/D" "shiftreg_4_0/dff_0/a_30_430#" 4.55172
+cap "shiftreg_4_0/dff_0/a_30_980#" "shiftreg_4_0/VP" 4.88889
+cap "shiftreg_4_0/VN" "shiftreg_4_0/dff_0/a_30_430#" 36.9706
+cap "shiftreg_4_0/D" "shiftreg_4_0/dff_0/a_30_980#" 2.42105
+cap "shiftreg_4_0/nD" "shiftreg_4_0/VP" 49.4601
+cap "shiftreg_4_0/D" "shiftreg_4_0/dff_0/CLK" 17.6333
+cap "shiftreg_4_0/VP" "shiftreg_4_0/dff_0/a_30_430#" 5.07692
+cap "shiftreg_4_0/dff_0/a_30_980#" "shiftreg_4_0/VP" 24.2403
+cap "shiftreg_4_0/nD" "shiftreg_4_0/dff_0/a_30_430#" 6.79412
+cap "shiftreg_4_0/nD" "shiftreg_4_0/dff_0/a_30_980#" 33
+cap "shiftreg_4_0/D" "shiftreg_4_0/VP" -1.42109e-14
+cap "shiftreg_4_0/D" "shiftreg_4_0/nD" 8.88178e-15
+merge "inverter_0/VN" "shiftreg_4_0/VN" -307.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1500 0 0 0 0 0 0 0 0 0 0
+merge "shiftreg_4_0/VN" "shiftreg_4_0/VSUBS"
+merge "shiftreg_4_0/VSUBS" "VSUBS"
+merge "inverter_0/CLK" "shiftreg_4_0/CLK" -32.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/nD" "shiftreg_4_0/nD" -22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/VP" "shiftreg_4_0/VP" -530.335 0 0 0 0 -24900 -1720 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -227900 -1500 0 0 0 0 0 0 0 0 0 0
+merge "inverter_0/D" "shiftreg_4_0/D" -22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
