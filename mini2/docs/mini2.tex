@@ -71,7 +71,7 @@ Project zip file: \href{https://github.com/QingmuDeng/MADVLSI/blob/main/mini2/De
 \section{Background}
     The D flip-flop design in this project is inspired by the thesis work by Sivilotti. [Sivilotti91] One important aspect of the D flip-flop operation is the ratio between the strength ratio of the pull up/down transistors and that of the pass transistors. Too strong of a pass transistor could potentially propagate the behaviors of downstream flip-flops upstreams and result in set/reset issues. The equation of merit is
     \begin{align}
-        \frac{S_{Q_{pull}}}{S_{pass}} > \frac{(\phi-V_{Tn}-nV_A)}{2n(\phi-V_{Tn})V_A-n^2V_A^2}
+        \frac{S_{Q_{pull}}}{S_{Q_{pass}}} > \frac{(\phi-V_{Tn}-nV_A)}{2n(\phi-V_{Tn})V_A-n^2V_A^2}
     \end{align}
     where $\phi$ is the clock voltage, $V_{Tn}$ the threshold voltage of the transistors, $n$ the subthreshold slope factor, and $V_A$ the voltage at the drain of the pass transistor. Plotting the righthand side equation against the clock voltage, while assuming $V_A=V_{Tn}=0.52V$ and $n=1.4$, gives us Figure \ref{fig:sratio}.
     \begin{figure}[!ht]
@@ -161,7 +161,7 @@ Project zip file: \href{https://github.com/QingmuDeng/MADVLSI/blob/main/mini2/De
         \item Width: 14.35 $\mu$m
         \item Height: 9.90 $\mu$m 
     \end{itemize}.
-    There are no design rule violations.
+    There are no design rule violations. The layout width can be further minimized if I move the bulk contact from in between the rows of pMOS/nMOS transistors to be entirely above/below the rows of the pMOS/nMOS. In that case, the rightmost drain/source regions of the previous D flip-flop cells can be directly laid on top of the leftmost drain/source regions of the next D flip-flop cells without design rule violations. However, I decided not to further pursue that approach for the symmetric looks within the two rows of pMOS/nMOS.
 
     \begin{figure}[!ht]
         \centering
