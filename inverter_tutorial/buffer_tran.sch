@@ -4,7 +4,6 @@ K {}
 V {}
 S {}
 E {}
-C {/mnt/hgfs/Github/MADVLSI/inverter_tutorial/buffer.sym} 0 0 0 0 {name=X1}
 C {madvlsi/tt_models.sym} 100 -130 0 0 {
 name=TT_MODELS
 only_toplevel=false
@@ -25,3 +24,4 @@ C {devices/lab_pin.sym} 60 0 2 0 {name=l8 sig_type=std_logic lab=Vout}
 C {devices/code_shown.sym} 70 50 0 0 {name=SPICE only_toplevel=false value=".tran 0.01n 1u
 .save all"}
 C {devices/lab_pin.sym} -140 30 0 0 {name=l6 sig_type=std_logic lab=Vin}
+C {/home/madvlsi/MADVLSI/inverter_tutorial/buffer.sym} 0 0 0 0 {name=X1}
