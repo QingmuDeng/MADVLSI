@@ -1,0 +1,42 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+
+Subcircuit summary:
+Circuit 1: dff                             |Circuit 2: dff                             
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (8)                |sky130_fd_pr__pfet_01v8 (8)                
+sky130_fd_pr__nfet_01v8 (8)                |sky130_fd_pr__nfet_01v8 (8)                
+Number of devices: 16                      |Number of devices: 16                      
+Number of nets: 13                         |Number of nets: 13                         
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: dff                             |Circuit 2: dff                             
+-------------------------------------------|-------------------------------------------
+nD                                         |nD                                         
+D                                          |D                                          
+CLK                                        |CLK                                        
+VN                                         |GND **Mismatch**                           
+VP                                         |VDD **Mismatch**                           
+Q                                          |Q                                          
+nQ                                         |nQ                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes dff and dff are equivalent.
+
+Subcircuit summary:
+Circuit 1: layout/shiftreg_4_lvs.spice     |Circuit 2: schem/shiftreg_4_lvs.spice      
+-------------------------------------------|-------------------------------------------
+dff (4)                                    |dff (4)                                    
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 13                         |Number of nets: 13                         
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes layout/shiftreg_4_lvs.spice and schem/shiftreg_4_lvs.spice are equivalent.
+Circuits match uniquely.
