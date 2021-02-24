@@ -71,11 +71,11 @@ Project zip file: \href{https://github.com/QingmuDeng/MADVLSI/blob/main/mini1/De
 \section{Schematic Capture and Simulation}
     \begin{figure}[!ht]
         \begin{subfigure}{0.5\linewidth}
-            \includegraphics[width=\linewidth]{inverter_sym.png}
+            \includegraphics[width=\linewidth]{../img/inverter_sym.png}
             \caption{Inverter symbol created in Xschem.}
         \end{subfigure}
         \begin{subfigure}{0.5\linewidth}
-            \includegraphics[width=\linewidth]{inverter_sch.png}
+            \includegraphics[width=\linewidth]{../img/inverter_sch.png}
             \caption{Inverter schematic created in Xschem.}
         \end{subfigure}
         \caption{Inverter design in Xschem.}
@@ -84,11 +84,11 @@ Project zip file: \href{https://github.com/QingmuDeng/MADVLSI/blob/main/mini1/De
     To begin with, I implemented an inverter design shown in Figure \ref{fig:inv} as introduced by Professor Minch in his tutorial video.
     \begin{figure}[!ht]
         \begin{subfigure}{0.5\linewidth}
-            \includegraphics[width=\linewidth]{NAND2_sym.png}
+            \includegraphics[width=\linewidth]{../img/NAND2_sym.png}
             \caption{NAND2 symbol created in Xschem.}
         \end{subfigure}
         \begin{subfigure}{0.5\linewidth}
-            \includegraphics[width=\linewidth]{NAND2_sch.png}
+            \includegraphics[width=\linewidth]{../img/NAND2_sch.png}
             \caption{NAND2 schematic created in Xschem.}
         \end{subfigure}
         \caption{NAND2 design in Xschem.}
@@ -102,7 +102,7 @@ Project zip file: \href{https://github.com/QingmuDeng/MADVLSI/blob/main/mini1/De
         % \begin{subfigure}{0.5/textwidth}
         %     \
         % \end{subfigure}
-        \includegraphics[width=\linewidth]{AND2_harness.png}
+        \includegraphics[width=\linewidth]{../img/AND2_harness.png}
         \caption{The simulation setup of a AND2 gate made of a NAND2 and an inverter.}
         \label{fig:and2}
     \end{figure}
@@ -112,7 +112,7 @@ Project zip file: \href{https://github.com/QingmuDeng/MADVLSI/blob/main/mini1/De
         % \begin{subfigure}{0.5/textwidth}
         %     \
         % \end{subfigure}
-        \includegraphics[width=\linewidth]{AND2_sim.png}
+        \includegraphics[width=\linewidth]{../img/AND2_sim.png}
         \caption{The simulation AND2 gate behavior viewed in \textit{gaw}.}
         \label{fig:and2res}
     \end{figure}
@@ -123,19 +123,19 @@ Project zip file: \href{https://github.com/QingmuDeng/MADVLSI/blob/main/mini1/De
     Similarly, the inverter and NAND2 were separately laid out in \textit{Magic} as shown in Figure \ref{fig:invmag} and \ref{fig:nand2mag}. The output of the NAND2 was designed to align with the input of the inverter such that they can fit together nicely to form AND2 as shown in Figure \ref{fig:and2mag}, all the while sharing and extending the same power rails.
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=0.8\linewidth]{inverter_mag.png}
+        \includegraphics[width=0.8\linewidth]{../img/inverter_mag.png}
         \caption{\textit{Magic} layout of the inverter.}
         \label{fig:invmag}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=0.8\linewidth]{nand2_mag.png}
+        \includegraphics[width=0.8\linewidth]{../img/nand2_mag.png}
         \caption{\textit{Magic} layout of the NAND2.}
         \label{fig:nand2mag}
     \end{figure}
     \begin{figure}[!ht]
         \centering
-        \includegraphics[width=\linewidth]{and2mag.png}
+        \includegraphics[width=\linewidth]{../img/and2mag.png}
         \caption{\textit{Magic} layout of the AND2 by combining NAND2 and inverter layouts.}
         \label{fig:and2mag}
     \end{figure}
