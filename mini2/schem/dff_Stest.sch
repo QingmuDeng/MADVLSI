@@ -104,10 +104,10 @@ only_toplevel=false
 value=".option wnflag=1
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {madvlsi/vsource.sym} -390 -110 0 0 {name=V1
+C {madvlsi/vsource.sym} -260 -110 0 0 {name=V1
 value=1.8}
-C {madvlsi/vdd.sym} -390 -140 0 0 {name=l9 lab=VDD}
-C {madvlsi/gnd.sym} -390 -80 0 0 {name=l10 lab=GND}
+C {madvlsi/vdd.sym} -260 -140 0 0 {name=l9 lab=VDD}
+C {madvlsi/gnd.sym} -260 -80 0 0 {name=l10 lab=GND}
 C {madvlsi/vsource.sym} -450 -110 0 0 {name=V2
 value="pulse 0 1.8 5n 1n 1n 5n 10n"}
 C {madvlsi/gnd.sym} -450 -80 0 0 {name=l12 lab=GND}
