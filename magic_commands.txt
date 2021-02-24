@@ -15,4 +15,5 @@ shift X or X
 extract all (for spice netlist)
 ext2spice hierarchy on
 ext2spice scale off
+ext2spice cthres infinity
 ext2spice
