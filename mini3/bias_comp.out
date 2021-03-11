@@ -1,0 +1,20 @@
+Equate elements:  no current cell.
+Equate elements:  no current cell.
+Class schem/bias_lvs.spice:  Merged 21 devices.
+Class layout/bias_lvs.spice:  Merged 21 devices.
+
+Subcircuit summary:
+Circuit 1: schem/bias_lvs.spice            |Circuit 2: layout/bias_lvs.spice           
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (16)               |sky130_fd_pr__nfet_01v8 (16)               
+sky130_fd_pr__pfet_01v8 (15)               |sky130_fd_pr__pfet_01v8 (15)               
+Number of devices: 31                      |Number of devices: 31                      
+Number of nets: 22                         |Number of nets: 22                         
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match with 9 symmetries.
+Circuits match correctly.
+Cells have no pins;  pin matching not needed.
+Device classes schem/bias_lvs.spice and layout/bias_lvs.spice are equivalent.
+Circuits match uniquely.
