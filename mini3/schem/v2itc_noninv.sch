@@ -44,7 +44,7 @@ C {madvlsi/capacitor.sym} 230 20 0 0 {name=C1
 value=2p
 m=1}
 C {madvlsi/gnd.sym} 230 50 0 0 {name=l13 lab=GND}
-C {devices/code_shown.sym} -250 240 0 0 {name=SPICE only_toplevel=false value="*.dc V1 0 1.8 0.001 V2 0.0 1.8 0.3
+C {devices/code_shown.sym} 450 -120 0 0 {name=SPICE only_toplevel=false value="*.dc V1 0 1.8 0.001 V2 0.0 1.8 0.3
 *.save v(Vout) v(V1) v(V2) v(Vbn) v(Vcn) v(Vcp) v(Vbp)
 .control
 dc V1 0 1.0 0.001

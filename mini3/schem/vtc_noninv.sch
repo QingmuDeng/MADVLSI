@@ -14,7 +14,7 @@ N -60 10 -60 70 { lab=Vcn}
 N -110 -70 -110 -50 { lab=Vbp}
 N -110 40 -110 70 { lab=Vbn}
 C {/home/madvlsi/MADVLSI/mini3/schem/cas_diff_lvs.sym} 100 -10 0 0 {name=X1}
-C {madvlsi/tt_models.sym} 260 -140 0 0 {
+C {madvlsi/tt_models.sym} 300 -140 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
@@ -44,20 +44,20 @@ C {madvlsi/capacitor.sym} 230 20 0 0 {name=C1
 value=2p
 m=1}
 C {madvlsi/gnd.sym} 230 50 0 0 {name=l13 lab=GND}
-C {devices/code_shown.sym} -250 240 0 0 {name=SPICE only_toplevel=false value="*.dc V1 0 1.8 0.001 V2 0.0 1.8 0.3
+C {devices/code_shown.sym} 430 -70 0 0 {name=SPICE only_toplevel=false value="*.dc V1 0 1.8 0.001 V2 0.0 1.8 0.3
 *.save v(Vout) v(V1) v(V2) v(Vbn) v(Vcn) v(Vcp) v(Vbp)
 .control
-*dc V1 0 1.8 0.001 V2 0.25 0.75 0.25
-*run
-*plot v(Vout) v(V1) V(V2)  
-compose V start=0.25 stop=0.75 step=0.25
-foreach val $&V
-  alter V2 $val
-  dc V1 0 1.8 0.001
-  run 
-end
+dc V1 0 1.8 0.001 V2 0.0 1.0 0.25
+run
+*compose V2 start=0.0 stop=1.0 step=0.25
+*foreach val $&V2
+*  alter v2 $val
+*  dc v1 0 1.8 0.001
+*  run 
+*end
+plot v(Vout) v(V1) V(V2)  
 .endc
-.save v(Vout) v(V1) v(V2) v(Vbn) v(Vcn) v(Vcp) v(Vbp) v(X1.net8)
+*.save v(Vout) v(V1) v(V2) v(Vbn) v(Vcn) v(Vcp) v(Vbp) v(X1.net8)
 .OPTIONS ITL1=300  ITL2=100"}
 C {devices/lab_pin.sym} -110 -70 1 0 {name=l14 sig_type=std_logic lab=Vbp}
 C {devices/lab_pin.sym} -60 -70 1 0 {name=l15 sig_type=std_logic lab=Vcp}
