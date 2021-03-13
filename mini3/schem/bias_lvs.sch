@@ -4,8 +4,10 @@ K {}
 V {}
 S {}
 E {}
+B 5 -752.5 -142.5 -747.5 -137.5 {name=XXX
+dir=inout}
 N -910 130 -870 130 { lab=#net1}
-N -810 130 -770 130 { lab=#net2}
+N -810 130 -770 130 { lab=net2}
 N -710 130 -670 130 { lab=GND}
 N -610 130 -570 130 { lab=Vcp}
 N -510 130 -470 130 { lab=GND}
@@ -118,7 +120,7 @@ N -990 70 -990 130 { lab=#net15}
 N -1390 130 -1350 130 { lab=GND}
 N -1320 -180 -1320 -150 { lab=Vbp}
 N -1630 130 -1590 130 { lab=GND}
-N -1490 130 -1450 130 { lab=Vbn}
+N -1490 130 -1450 130 { lab=xxx}
 N -1710 -120 -1690 -120 { lab=Vbp}
 N -1490 -120 -1450 -120 { lab=VDD}
 N -1630 -120 -1590 -120 { lab=VDD}
@@ -170,11 +172,11 @@ N -1190 -150 -1190 -120 { lab=VDD}
 N -1220 100 -1190 100 { lab=GND}
 N -1190 100 -1190 130 { lab=GND}
 N -1270 130 -1250 130 { lab=Vbp}
-N -240 230 1120 230 { lab=Vbn}
-N -1320 230 -940 230 { lab=Vbn}
-N -1420 230 -1320 230 { lab=Vbn}
-N -1660 230 -1560 230 { lab=Vbn}
-N -1490 230 -1420 230 { lab=Vbn}
+N -240 230 1120 230 { lab=xxx}
+N -1320 230 -940 230 { lab=xxx}
+N -1420 230 -1320 230 { lab=xxx}
+N -1660 230 -1560 230 { lab=xxx}
+N -1490 230 -1420 230 { lab=xxx}
 N -1320 -280 -1320 -180 { lab=Vbp}
 N -1660 -280 -1660 -180 { lab=Vbp}
 N 930 -280 1120 -280 { lab=Vbp}
@@ -194,34 +196,34 @@ N 830 -280 830 -180 { lab=Vbp}
 N 730 -280 830 -280 { lab=Vbp}
 N 930 -280 930 -180 { lab=Vbp}
 N 830 -280 930 -280 { lab=Vbp}
-N -940 230 -840 230 { lab=Vbn}
-N -840 230 -740 230 { lab=Vbn}
-N -740 230 -640 230 { lab=Vbn}
-N -640 230 -540 230 { lab=Vbn}
-N -540 230 -440 230 { lab=Vbn}
-N -440 230 -340 230 { lab=Vbn}
-N -340 230 -240 230 { lab=Vbn}
-N -1490 130 -1490 230 { lab=Vbn}
-N -1530 130 -1490 130 { lab=Vbn}
-N -1560 230 -1490 230 { lab=Vbn}
-N -1490 230 -1490 280 { lab=Vbn}
+N -940 230 -840 230 { lab=xxx}
+N -840 230 -740 230 { lab=xxx}
+N -740 230 -640 230 { lab=xxx}
+N -640 230 -540 230 { lab=xxx}
+N -540 230 -440 230 { lab=xxx}
+N -440 230 -340 230 { lab=xxx}
+N -340 230 -240 230 { lab=xxx}
+N -1490 130 -1490 230 { lab=xxx}
+N -1530 130 -1490 130 { lab=xxx}
+N -1560 230 -1490 230 { lab=xxx}
+N -1490 230 -1490 280 { lab=xxx}
 N 230 70 230 100 { lab=#net16}
 N -590 -120 -590 130 { lab=Vcp}
 N 580 -120 580 70 { lab=Vcn}
 N -590 -40 1120 -40 { lab=Vcp}
 N 580 10 1120 10 { lab=Vcn}
-N -240 160 -240 230 { lab=Vbn}
-N -340 160 -340 230 { lab=Vbn}
-N -440 160 -440 230 { lab=Vbn}
-N -540 160 -540 230 { lab=Vbn}
-N -640 160 -640 230 { lab=Vbn}
-N -740 160 -740 230 { lab=Vbn}
-N -840 160 -840 230 { lab=Vbn}
-N -940 160 -940 230 { lab=Vbn}
-N -1660 160 -1660 230 { lab=Vbn}
-N -1560 160 -1560 230 { lab=Vbn}
-N -1420 160 -1420 230 { lab=Vbn}
-N -1320 160 -1320 230 { lab=Vbn}
+N -240 160 -240 230 { lab=xxx}
+N -340 160 -340 230 { lab=xxx}
+N -440 160 -440 230 { lab=xxx}
+N -540 160 -540 230 { lab=xxx}
+N -640 160 -640 230 { lab=xxx}
+N -740 160 -740 230 { lab=xxx}
+N -840 160 -840 230 { lab=xxx}
+N -940 160 -940 230 { lab=xxx}
+N -1660 160 -1660 230 { lab=xxx}
+N -1560 160 -1560 230 { lab=xxx}
+N -1420 160 -1420 230 { lab=xxx}
+N -1320 160 -1320 230 { lab=xxx}
 N -690 -60 -490 -60 { lab=#net4}
 N 480 190 680 190 { lab=#net12}
 C {madvlsi/nmos3.sym} -940 130 3 0 {name=M4a
@@ -1029,7 +1031,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/gnd.sym} -1190 130 3 0 {name=l13 lab=GND}
-C {devices/opin.sym} 1120 230 0 0 {name=p1 lab=Vbn}
 C {devices/opin.sym} 1120 10 0 0 {name=p2 lab=Vcn}
 C {devices/opin.sym} 1120 -40 0 0 {name=p3 lab=Vcp}
 C {devices/opin.sym} 1120 -280 0 0 {name=p4 lab=Vbp}
+C {devices/lab_pin.sym} -790 130 1 0 {name=l14 sig_type=std_logic lab=net2}
+C {devices/iopin.sym} 1120 230 0 0 {name=p1 lab=Vbn}
