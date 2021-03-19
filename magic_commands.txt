@@ -25,3 +25,6 @@ set wr_singlescale
 wrdata cmdiffamp_follower.txt db(v(Vout)) 180*cph(v(Vout))/pi
 
 setplot new 
+
+
+feedback find
