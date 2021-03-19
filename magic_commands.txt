@@ -17,3 +17,11 @@ ext2spice hierarchy on
 ext2spice scale off
 ext2spice cthres infinity
 ext2spice
+
+
+plot db (v(Vout)) 180*cph(v(Vout))/pi
+set wr_vecnames
+set wr_singlescale
+wrdata cmdiffamp_follower.txt db(v(Vout)) 180*cph(v(Vout))/pi
+
+setplot new 
